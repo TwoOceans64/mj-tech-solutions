@@ -68,7 +68,10 @@ export default function RootLayout({
     >
       <head>
         {/* ⭐ Google Search Console Verification ⭐ */}
-        <meta name="google-site-verification" content="DGTFiCskv3M5hAC" />
+        <meta
+          name="google-site-verification"
+          content="DGTFiCskv3M5hAC2s04NJ2Nrky6dKQ3WhOl1CKTvAic"
+        />
       </head>
 
       <body className="min-h-full flex flex-col bg-black text-white">
