@@ -4,10 +4,32 @@ import { useState } from "react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    const form = e.currentTarget;
+
+    const formData = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    setLoading(false);
+
+    if (res.ok) {
+      setSubmitted(true);
+      form.reset();
+    }
   }
 
   return (
@@ -22,6 +44,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm mb-1">Full Name</label>
             <input
+              name="name"
               type="text"
               required
               className="w-full rounded bg-slate-900 border border-slate-700 px-3 py-2 text-sm"
@@ -31,6 +54,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm mb-1">Email</label>
             <input
+              name="email"
               type="email"
               required
               className="w-full rounded bg-slate-900 border border-slate-700 px-3 py-2 text-sm"
@@ -40,6 +64,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm mb-1">Message</label>
             <textarea
+              name="message"
               required
               rows={5}
               className="w-full rounded bg-slate-900 border border-slate-700 px-3 py-2 text-sm"
@@ -48,9 +73,10 @@ export default function ContactPage() {
 
           <button
             type="submit"
+            disabled={loading}
             className="rounded bg-emerald-500 px-4 py-2 text-sm font-medium text-slate-950"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       ) : (
