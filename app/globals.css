@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom background for Services → Pricing section */
+.ai-bg {
+  background-image: url('/portfolio/bg-earth-ai-hands.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Optional overlay for readability */
+.ai-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.ai-bg > * {
+  position: relative;
+  z-index: 1;
+}
