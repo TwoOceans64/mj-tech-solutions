@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 
-/* Optional overlay for readability */
+/* Default overlay for readability */
 .ai-bg::before {
   content: "";
   position: absolute;
@@ -47,4 +47,37 @@ body {
 .ai-bg > * {
   position: relative;
   z-index: 1;
+}
+
+/* Overlay variants for different sections */
+.ai-bg-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* lighter overlay */
+  z-index: 0;
+}
+
+.ai-bg-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* darker overlay */
+  z-index: 0;
+}
+
+.ai-bg-tint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 40, 80, 0.6); /* subtle navy tint */
+  z-index: 0;
+}
+
+.ai-bg-teal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 128, 128, 0.5); /* teal overlay */
+  z-index: 0;
 }
