@@ -2,8 +2,14 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="border-b border-slate-800 bg-linear-to-b from-slate-950 to-slate-900">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 md:flex-row md:items-center">
+    <section
+      className="relative border-b border-slate-800 bg-cover bg-center"
+      style={{ backgroundImage: "url('/portfolio/hero-tech-services.jpg')" }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 md:flex-row md:items-center">
         <div className="flex-1">
           <p className="text-xs uppercase tracking-[0.2em] text-emerald-400">
             MJ Tech Solutions
