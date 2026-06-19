@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const response = await fetch(
-      "https://jmbrowers93.app.n8n.cloud/webhook/contact",
+      "https://mjtechsolutions72.app.n8n.cloud/webhook/contact",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
