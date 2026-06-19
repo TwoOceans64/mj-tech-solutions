@@ -13,42 +13,42 @@ export default function ServicesPage() {
           title="Cellphone Repairs"
           description="Screen replacements, battery issues, charging ports, software fixes and more."
           href="/services/cellphone-repairs"
-          image="/services/cellphone.jpg"
+          image="/portfolio/cellphone-repairs.jpg"
         />
 
         <ServiceCard
           title="Laptop Repairs"
           description="Hardware repairs, software installation, virus removal, upgrades and more."
           href="/services/laptop-repairs"
-          image="/services/laptop.jpg"
+          image="/portfolio/laptop-repairs.jpg"
         />
 
         <ServiceCard
           title="Computer Repairs"
           description="Desktop repairs, hardware upgrades, OS installs, troubleshooting and more."
           href="/services/computer-repairs"
-          image="/services/computer.jpg"
+          image="/portfolio/computer-repairs.jpg"
         />
 
         <ServiceCard
           title="Camera Setup"
           description="CCTV installation, configuration, remote viewing setup and maintenance."
           href="/services/camera-setup"
-          image="/services/cctv.jpg"
+          image="/portfolio/camera-setup.jpg"
         />
 
         <ServiceCard
           title="Business Registrations"
           description="CIPC company registration, amendments, tax numbers and compliance."
           href="/services/business-registrations"
-          image="/services/business.jpg"
+          image="/portfolio/business-registrations.jpg"
         />
 
         <ServiceCard
           title="Graphic Design"
           description="Logos, posters, business cards, flyers, social media designs and more."
           href="/services/graphic-design"
-          image="/services/design.jpg"
+          image="/portfolio/graphic-design.jpg"
         />
       </div>
     </section>
