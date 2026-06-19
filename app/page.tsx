@@ -1,7 +1,11 @@
+"use client";
 import { Hero } from "../components/Hero";
 import { ServiceCard } from "../components/ServiceCard";
+import { useCart } from "../components/CartContext";
 
 export default function HomePage() {
+  const { addToCart } = useCart();
+
   return (
     <>
       {/* Hero Section */}
@@ -95,7 +99,6 @@ export default function HomePage() {
               { title: "Software Installation", price: "R250", type: "cart" },
               { title: "Business Logo Design", price: "R300", type: "cart" },
               { title: "Hardware Repair", price: "Prices vary by model and parts required", type: "quote" },
-              { title: "Example Repairs", price: "R550 parts + R150 labour = R700 total", type: "cart" },
             ].map((item, idx) => (
               <div
                 key={idx}
@@ -107,9 +110,26 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4">
                   {item.type === "cart" ? (
-                    <button className="w-full rounded border border-emerald-500 px-3 py-2 text-sm text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition">
-                      Add to Cart
-                    </button>
+                    <div className="flex gap-2">
+                      <input
+                        type="number"
+                        min="1"
+                        defaultValue="1"
+                        className="w-16 rounded border border-slate-700 bg-slate-800 text-slate-200 px-2 py-1 text-sm"
+                        id={`qty-${idx}`}
+                      />
+                      <button
+                        onClick={() => {
+                          const qty = parseInt(
+                            (document.getElementById(`qty-${idx}`) as HTMLInputElement).value
+                          );
+                          addToCart(item.title, qty);
+                        }}
+                        className="flex-1 rounded border border-emerald-500 px-3 py-2 text-sm text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
                   ) : (
                     <a
                       href="/contact"
