@@ -19,42 +19,42 @@ export default function HomePage() {
             title="Cellphone Repairs"
             description="Screen replacements, battery issues, charging ports, software fixes and more."
             href="/services/cellphone-repairs"
-            image="/services/cellphone.jpg"
+            image="/services/cellphone-repairs.jpg"
           />
 
           <ServiceCard
             title="Laptop Repairs"
             description="Hardware repairs, software installation, virus removal, upgrades and more."
             href="/services/laptop-repairs"
-            image="/services/laptop.jpg"
+            image="/services/laptop-repairs.jpg"
           />
 
           <ServiceCard
             title="Computer Repairs"
             description="Desktop repairs, hardware upgrades, OS installs, troubleshooting and more."
             href="/services/computer-repairs"
-            image="/services/computer.jpg"
+            image="/services/computer-repairs.jpg"
           />
 
           <ServiceCard
             title="Camera Setup"
             description="CCTV installation, configuration, remote viewing setup and maintenance."
             href="/services/camera-setup"
-            image="/services/cctv.jpg"
+            image="/services/camera-setup.jpg"
           />
 
           <ServiceCard
             title="Business Registrations"
             description="CIPC company registration, amendments, tax numbers and compliance."
             href="/services/business-registrations"
-            image="/services/business.jpg"
+            image="/services/business-registrations.jpg"
           />
 
           <ServiceCard
             title="Graphic Design"
             description="Logos, posters, business cards, flyers, social media designs and more."
             href="/services/graphic-design"
-            image="/services/design.jpg"
+            image="/services/graphic-design.jpg"
           />
         </div>
       </section>
@@ -68,21 +68,21 @@ export default function HomePage() {
             <p className="text-slate-300">
               “Fast and reliable service! My phone was fixed the same day.”
             </p>
-            <p className="mt-4 text-sm text-emerald-400">— Thabo M.</p>
+            <p className="mt-4 text-sm text-emerald-400">— Tshireletso .</p>
           </div>
 
           <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
             <p className="text-slate-300">
               “Professional and friendly. They set up my CCTV perfectly.”
             </p>
-            <p className="mt-4 text-sm text-emerald-400">— Lerato P.</p>
+            <p className="mt-4 text-sm text-emerald-400">— Mr P.</p>
           </div>
 
           <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
             <p className="text-slate-300">
               “Great prices and excellent service. Highly recommended.”
             </p>
-            <p className="mt-4 text-sm text-emerald-400">— Jason K.</p>
+            <p className="mt-4 text-sm text-emerald-400">— Jason.</p>
           </div>
         </div>
       </section>
