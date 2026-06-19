@@ -64,7 +64,7 @@ export default function HomePage() {
               <p className="text-slate-300">
                 “Fast and reliable service! My phone was fixed the same day.”
               </p>
-              <p className="mt-4 text-sm text-emerald-400">— Tshireletso .</p>
+              <p className="mt-4 text-sm text-emerald-400">— Tshireletso.</p>
             </div>
             <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
               <p className="text-slate-300">
@@ -89,7 +89,35 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {/* ... all your pricing cards here ... */}
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">T‑Shirt Printing</h3>
+              <p className="mt-2 text-slate-300">R60 per shirt</p>
+            </div>
+
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">Business Registration</h3>
+              <p className="mt-2 text-slate-300">R750</p>
+            </div>
+
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">Software Installation</h3>
+              <p className="mt-2 text-slate-300">R250</p>
+            </div>
+
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">Business Logo Design</h3>
+              <p className="mt-2 text-slate-300">R300</p>
+            </div>
+
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">Example Repair</h3>
+              <p className="mt-2 text-slate-300">R550 parts + R150 labour = R700 total</p>
+            </div>
+
+            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
+              <h3 className="text-lg font-semibold">Variable Repairs</h3>
+              <p className="mt-2 text-slate-300">Price depends on model and parts</p>
+            </div>
           </div>
         </section>
       </div>
