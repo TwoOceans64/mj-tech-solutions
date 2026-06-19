@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { CartProvider } from "../components/CartContext"; // ✅ import provider
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,18 +76,20 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col bg-black text-white">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
 
-        {/* WhatsApp Floating Button */}
-        <a
-          href="https://wa.me/27640775100"
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/40 hover:bg-emerald-600 transition"
-          target="_blank"
-        >
-          <img src="/whatsapp.svg" alt="WhatsApp" className="h-8 w-8" />
-        </a>
+          {/* WhatsApp Floating Button */}
+          <a
+            href="https://wa.me/27640775100"
+            className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/40 hover:bg-emerald-600 transition"
+            target="_blank"
+          >
+            <img src="/whatsapp.svg" alt="WhatsApp" className="h-8 w-8" />
+          </a>
+        </CartProvider>
       </body>
     </html>
   );
