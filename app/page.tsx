@@ -89,35 +89,38 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">T‑Shirt Printing</h3>
-              <p className="mt-2 text-slate-300">R60 per shirt</p>
-            </div>
-
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">Business Registration</h3>
-              <p className="mt-2 text-slate-300">R750</p>
-            </div>
-
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">Software Installation</h3>
-              <p className="mt-2 text-slate-300">R250</p>
-            </div>
-
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">Business Logo Design</h3>
-              <p className="mt-2 text-slate-300">R300</p>
-            </div>
-
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">Example Repair</h3>
-              <p className="mt-2 text-slate-300">R550 parts + R150 labour = R700 total</p>
-            </div>
-
-            <div className="rounded border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-lg font-semibold">Variable Repairs</h3>
-              <p className="mt-2 text-slate-300">Price depends on model and parts</p>
-            </div>
+            {[
+              { title: "T‑Shirt Sample Design", price: "R60 per shirt", type: "cart" },
+              { title: "Business Registration", price: "R750", type: "cart" },
+              { title: "Software Installation", price: "R250", type: "cart" },
+              { title: "Business Logo Design", price: "R300", type: "cart" },
+              { title: "Hardware Repair", price: "Prices vary by model and parts required", type: "quote" },
+              { title: "Example Repairs", price: "R550 parts + R150 labour = R700 total", type: "cart" },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="rounded border border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-slate-300">{item.price}</p>
+                </div>
+                <div className="mt-4">
+                  {item.type === "cart" ? (
+                    <button className="w-full rounded border border-emerald-500 px-3 py-2 text-sm text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition">
+                      Add to Cart
+                    </button>
+                  ) : (
+                    <a
+                      href="/contact"
+                      className="block w-full rounded bg-emerald-500 px-3 py-2 text-sm font-medium text-slate-950 hover:bg-emerald-600 transition text-center"
+                    >
+                      Get Quote
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
