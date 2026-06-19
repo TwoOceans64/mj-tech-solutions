@@ -27,7 +27,7 @@ export function Hero() {
             </Link>
 
             <a
-              href="https://wa.me/27XXXXXXXXX"
+              href="https://wa.me/27640775100"
               className="rounded border border-slate-600 px-4 py-2 text-sm"
             >
               WhatsApp us
