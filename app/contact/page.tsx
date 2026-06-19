@@ -15,6 +15,7 @@ export default function ContactPage() {
     const formData = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement)?.value || "",
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
@@ -57,6 +58,15 @@ export default function ContactPage() {
               name="email"
               type="email"
               required
+              className="w-full rounded bg-slate-900 border border-slate-700 px-3 py-2 text-sm"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm mb-1">Phone</label>
+            <input
+              name="phone"
+              type="text"
               className="w-full rounded bg-slate-900 border border-slate-700 px-3 py-2 text-sm"
             />
           </div>
