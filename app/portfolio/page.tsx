@@ -2,28 +2,28 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Laptop Repair",
-    image: "/portfolio/laptop-repair.jpg",
+    title: "Cellphone Repairs",
+    image: "/portfolio/cellphone-repairs.jpg",
   },
   {
-    title: "Phone Screen Replacement",
-    image: "/portfolio/phone-screen.jpg",
+    title: "Laptop Repairs",
+    image: "/portfolio/laptop-repairs.jpg",
   },
   {
-    title: "CCTV Installation",
-    image: "/portfolio/cctv.jpg",
+    title: "Computer Repairs",
+    image: "/portfolio/computer-repairs.jpg",
   },
   {
-    title: "Business Registration",
-    image: "/portfolio/business-registration.jpg",
+    title: "Camera Setup",
+    image: "/portfolio/camera-setup.jpg",
   },
   {
-    title: "Logo Design",
-    image: "/portfolio/logo-design.jpg",
+    title: "Business Registrations",
+    image: "/portfolio/business-registrations.jpg",
   },
   {
-    title: "PC Cleaning & Optimization",
-    image: "/portfolio/pc-cleaning.jpg",
+    title: "Graphic Design",
+    image: "/portfolio/graphic-design.jpg",
   },
 ];
 

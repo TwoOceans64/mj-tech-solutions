@@ -19,42 +19,42 @@ export default function HomePage() {
             title="Cellphone Repairs"
             description="Screen replacements, battery issues, charging ports, software fixes and more."
             href="/services/cellphone-repairs"
-            image="/services/cellphone-repairs.jpg"
+            image="/portfolio/cellphone-repairs.jpg"
           />
 
           <ServiceCard
             title="Laptop Repairs"
             description="Hardware repairs, software installation, virus removal, upgrades and more."
             href="/services/laptop-repairs"
-            image="/services/laptop-repairs.jpg"
+            image="/portfolio/laptop-repairs.jpg"
           />
 
           <ServiceCard
             title="Computer Repairs"
             description="Desktop repairs, hardware upgrades, OS installs, troubleshooting and more."
             href="/services/computer-repairs"
-            image="/services/computer-repairs.jpg"
+            image="/portfolio/computer-repairs.jpg"
           />
 
           <ServiceCard
             title="Camera Setup"
             description="CCTV installation, configuration, remote viewing setup and maintenance."
             href="/services/camera-setup"
-            image="/services/camera-setup.jpg"
+            image="/portfolio/camera-setup.jpg"
           />
 
           <ServiceCard
             title="Business Registrations"
             description="CIPC company registration, amendments, tax numbers and compliance."
             href="/services/business-registrations"
-            image="/services/business-registrations.jpg"
+            image="/portfolio/business-registrations.jpg"
           />
 
           <ServiceCard
             title="Graphic Design"
             description="Logos, posters, business cards, flyers, social media designs and more."
             href="/services/graphic-design"
-            image="/services/graphic-design.jpg"
+            image="/portfolio/graphic-design.jpg"
           />
         </div>
       </section>
@@ -203,7 +203,7 @@ export default function HomePage() {
             </ul>
 
             <p className="mt-4 text-slate-400 text-sm">
-              Example: A phone screen that costs R350 for parts + R150 labour = R500 total.
+              Example: A phone screen that costs R550 for parts + R150 labour = R700 total.
             </p>
 
             <a
