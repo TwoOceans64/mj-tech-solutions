@@ -94,11 +94,11 @@ export default function HomePage() {
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "T‑Shirt Sample Design", price: "R60 per shirt", type: "cart" },
-              { title: "Business Registration", price: "R750", type: "cart" },
-              { title: "Software Installation", price: "R250", type: "cart" },
-              { title: "Business Logo Design", price: "R300", type: "cart" },
-              { title: "Hardware Repair", price: "Prices vary by model and parts required", type: "quote" },
+              { title: "T‑Shirt Sample Design", price: 60, label: "R60 per shirt", type: "cart" },
+              { title: "Business Registration", price: 750, label: "R750", type: "cart" },
+              { title: "Software Installation", price: 250, label: "R250", type: "cart" },
+              { title: "Business Logo Design", price: 300, label: "R300", type: "cart" },
+              { title: "Hardware Repair", price: 0, label: "Prices vary by model and parts required", type: "quote" },
             ].map((item, idx) => (
               <div
                 key={idx}
@@ -106,7 +106,7 @@ export default function HomePage() {
               >
                 <div>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-slate-300">{item.price}</p>
+                  <p className="mt-2 text-slate-300">{item.label}</p>
                 </div>
                 <div className="mt-4">
                   {item.type === "cart" ? (
@@ -123,7 +123,7 @@ export default function HomePage() {
                           const qty = parseInt(
                             (document.getElementById(`qty-${idx}`) as HTMLInputElement).value
                           );
-                          addToCart(item.title, qty);
+                          addToCart(item.title, qty, item.price); // ✅ now passes price
                         }}
                         className="flex-1 rounded border border-emerald-500 px-3 py-2 text-sm text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition"
                       >

@@ -81,3 +81,19 @@ body {
   background: rgba(0, 128, 128, 0.5); /* teal overlay */
   z-index: 0;
 }
+
+/* ✅ Popup slide-in animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}

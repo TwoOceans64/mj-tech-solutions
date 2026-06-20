@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { CartProvider } from "../components/CartContext"; // ✅ import provider
+import { CartProvider, useCart } from "../components/CartContext"; // ✅ import provider + hook
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +57,18 @@ export const metadata: Metadata = {
   },
 };
 
+// ✅ Popup component
+function CartPopup() {
+  const { popupMessage } = useCart();
+  if (!popupMessage) return null;
+
+  return (
+    <div className="fixed bottom-20 right-6 z-50 rounded bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg animate-slide-in">
+      {popupMessage}
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,6 +92,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CartPopup /> {/* ✅ popup lives here */}
 
           {/* WhatsApp Floating Button */}
           <a
